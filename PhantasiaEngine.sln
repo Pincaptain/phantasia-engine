@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhantasiaEngine.Shared", "PhantasiaEngine.Shared\PhantasiaEngine.Shared.csproj", "{F6AAD5D0-0E28-4C69-82FA-BD8365ACFE7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhantasiaEngine.Test", "PhantasiaEngine.Test\PhantasiaEngine.Test.csproj", "{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6AAD5D0-0E28-4C69-82FA-BD8365ACFE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AAD5D0-0E28-4C69-82FA-BD8365ACFE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AAD5D0-0E28-4C69-82FA-BD8365ACFE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AAD5D0-0E28-4C69-82FA-BD8365ACFE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

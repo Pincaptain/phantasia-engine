@@ -1,0 +1,13 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bce8601a_002Ddeed_002D4ff5_002Da288_002Dd40ac8870804/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestHashVerification" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B681CFBF-DF84-4A02-BE5D-092C30FC0D79::.NETCoreApp,Version=v3.1::PhantasiaEngine.Test.Tests.TestHashVerification&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B681CFBF-DF84-4A02-BE5D-092C30FC0D79::.NETCoreApp,Version=v3.1::PhantasiaEngine.Test.Tests.TestHashEquality&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Cryptonite/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Phantasia/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Subkey/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
