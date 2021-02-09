@@ -3,7 +3,7 @@ using PhantasiaEngine.Shared.Utilities;
 
 namespace PhantasiaEngine.Test
 {
-    public class Tests
+    public class CryptoniteTest
     {
         [SetUp]
         public void Setup()
