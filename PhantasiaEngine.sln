@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhantasiaEngine.Shared", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhantasiaEngine.Test", "PhantasiaEngine.Test\PhantasiaEngine.Test.csproj", "{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhantasiaEngine.Game", "PhantasiaEngine.Game\PhantasiaEngine.Game.csproj", "{F1D7DF06-C068-4C41-AD17-3C0BFC8B4E37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B681CFBF-DF84-4A02-BE5D-092C30FC0D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D7DF06-C068-4C41-AD17-3C0BFC8B4E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D7DF06-C068-4C41-AD17-3C0BFC8B4E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D7DF06-C068-4C41-AD17-3C0BFC8B4E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D7DF06-C068-4C41-AD17-3C0BFC8B4E37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
