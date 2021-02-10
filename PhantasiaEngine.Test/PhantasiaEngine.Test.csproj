@@ -13,6 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\PhantasiaEngine.Auth\PhantasiaEngine.Auth.csproj" />
       <ProjectReference Include="..\PhantasiaEngine.Shared\PhantasiaEngine.Shared.csproj" />
     </ItemGroup>
 
