@@ -27,13 +27,22 @@ namespace PhantasiaEngine.Auth.Controllers
         /// <returns>
         /// The result of the action either Ok(200) or BadRequest(400) if createUserRequest is invalid.
         /// </returns>
-        [HttpGet]
+        [HttpPost]
         [Route("create")]
         public IActionResult CreateUser([FromBody] CreateUserRequest createUserRequest)
         {
             _userService.CreateUser(createUserRequest);
 
             return Ok();
+        }
+
+        [HttpPost]
+        [Route("token/get")]
+        public IActionResult GetToken([FromBody] GetTokenRequest getTokenRequest)
+        {
+            var token = _userService.GetTokenResponse(getTokenRequest);
+
+            return Ok(token);
         }
     }
 }

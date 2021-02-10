@@ -7,5 +7,7 @@ namespace PhantasiaEngine.Auth.Repositories
         public void AddUser(User user);
         
         public User GetUserByUsername(string username);
+
+        public string GetToken(string username, string password);
     }
 }

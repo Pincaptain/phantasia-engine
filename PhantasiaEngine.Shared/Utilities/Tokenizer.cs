@@ -35,7 +35,7 @@ namespace PhantasiaEngine.Shared.Utilities
             var data = Convert.FromBase64String(token);
             var time = DateTime.FromBinary(BitConverter.ToInt64(data, 0));
 
-            return time < DateTime.UtcNow.AddHours(-24);
+            return time > DateTime.UtcNow.AddHours(-24);
         }
     }
 }

@@ -3,9 +3,14 @@ using Microsoft.Extensions.Logging;
 using PhantasiaEngine.Auth.Models;
 using PhantasiaEngine.Auth.Repositories;
 using PhantasiaEngine.Auth.Requests;
+using PhantasiaEngine.Auth.Responses;
 
 namespace PhantasiaEngine.Auth.Services
 {
+    /// <summary>
+    /// <c>UserService</c> class contains the business logic and
+    /// other functionalities for the user model.
+    /// </summary>
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
@@ -40,6 +45,36 @@ namespace PhantasiaEngine.Auth.Services
         public User GetUserByUsername(string username)
         {
             return _userRepository.GetUserByUsername(username);
+        }
+
+        /// <summary>
+        /// Returns a token response based on the provided <c>GetTokenRequest</c> object
+        /// containing the username and password.
+        /// </summary>
+        /// <param name="getTokenRequest">The token request containing the username and password</param>
+        /// <returns><c>TokenResponse</c> object that contains the requested token</returns>
+        public TokenResponse GetTokenResponse(GetTokenRequest getTokenRequest)
+        {
+            var token = _userRepository.GetToken(getTokenRequest.Username, getTokenRequest.Password);
+
+            var tokenResponse = new TokenResponse
+            {
+                Token = token
+            };
+
+            return tokenResponse;
+        }
+
+        /// <summary>
+        /// Validates the provided user credentials and returns true or false
+        /// based on their validity.
+        /// </summary>
+        /// <param name="username">The username of the user</param>
+        /// <param name="password">The password of the user</param>
+        /// <returns>Returns true or false based on the validity</returns>
+        public bool ValidateUserCredential(string username, string password)
+        {
+            return _userRepository.GetToken(username, password) != null;
         }
     }
 }

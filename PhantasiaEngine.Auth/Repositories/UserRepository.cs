@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using PhantasiaEngine.Auth.Contexts;
 using PhantasiaEngine.Auth.Models;
+using PhantasiaEngine.Shared.Utilities;
 
 namespace PhantasiaEngine.Auth.Repositories
 {
@@ -33,6 +34,19 @@ namespace PhantasiaEngine.Auth.Repositories
         {
             return _authContext.Users
                 .FirstOrDefault(user => user.Username.Equals(username));
+        }
+
+        public string GetToken(string username, string password)
+        {
+            var user = _authContext.Users.FirstOrDefault(u => u.Username.Equals(username));
+
+            if (user == null) return null;
+            if (Tokenizer.VerifyTimestampedToken(user.Token)) return user.Token;
+            
+            user.Token = Tokenizer.CreateTimestampedToken();
+            _authContext.SaveChanges();
+
+            return user.Token;
         }
     }
 }

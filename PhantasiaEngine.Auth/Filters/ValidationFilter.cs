@@ -26,19 +26,19 @@ namespace PhantasiaEngine.Auth.Filters
             {
                 var errors = context.ModelState
                     .Where(pair => pair.Value.Errors.Any())
-                    .ToDictionary(pair => pair.Key,
+                    .ToDictionary(pair => pair.Key, 
                         pair => pair.Value.Errors.Select(error => error.ErrorMessage))
                     .ToArray();
 
                 var errorResponse = new ErrorResponse();
 
-                foreach (var (key, value) in errors)
+                foreach (var (field, fieldErrors) in errors)
                 {
-                    foreach (var error in value)
+                    foreach (var error in fieldErrors)
                     {
                         var errorModel = new ErrorModel
                         {
-                            Field = key,
+                            Field = field,
                             Message = error
                         };
                         
@@ -47,6 +47,7 @@ namespace PhantasiaEngine.Auth.Filters
                 }
 
                 context.Result = new BadRequestObjectResult(errorResponse);
+                
                 return;
             }
 

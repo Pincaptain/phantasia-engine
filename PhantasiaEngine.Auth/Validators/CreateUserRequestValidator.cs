@@ -4,6 +4,10 @@ using PhantasiaEngine.Auth.Services;
 
 namespace PhantasiaEngine.Auth.Validators
 {
+    /// <summary>
+    /// <c>CreateUserRequestValidator</c> class contains the validation rules for
+    /// <c>CreateUserRequest</c><see cref="CreateUserRequest"/>.
+    /// </summary>
     // ReSharper disable once UnusedType.Global
     public class CreateUserRequestValidator : AbstractValidator<CreateUserRequest>
     {
