@@ -4,10 +4,6 @@ using PhantasiaEngine.Auth.Services;
 
 namespace PhantasiaEngine.Auth.Controllers
 {
-    /// <summary>
-    /// <c>UserController</c> class contains all the required user actions
-    /// accessed using the provided routes.
-    /// </summary>
     [ApiController]
     [Route("users")]
     public class UserController : ControllerBase
@@ -18,15 +14,7 @@ namespace PhantasiaEngine.Auth.Controllers
         {
             _userService = userService;
         }
-
-        /// <summary>
-        /// Creates a single user using the user service based on
-        /// the provided <c>CreateUserRequest</c> object sent in the request body. 
-        /// </summary>
-        /// <param name="createUserRequest">The create user request.</param>
-        /// <returns>
-        /// The result of the action either Ok(200) or BadRequest(400) if createUserRequest is invalid.
-        /// </returns>
+        
         [HttpPost]
         [Route("create")]
         public IActionResult CreateUser([FromBody] CreateUserRequest createUserRequest)
@@ -35,7 +23,7 @@ namespace PhantasiaEngine.Auth.Controllers
 
             return Ok();
         }
-
+        
         [HttpPost]
         [Route("token/get")]
         public IActionResult GetToken([FromBody] GetTokenRequest getTokenRequest)

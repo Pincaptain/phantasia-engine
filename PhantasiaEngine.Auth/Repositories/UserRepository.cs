@@ -14,22 +14,12 @@ namespace PhantasiaEngine.Auth.Repositories
             _authContext = authContext;
         }
 
-        /// <summary>
-        /// Adds the user to the database using the auth database context.
-        /// </summary>
-        /// <param name="user">The user to be added.</param>
         public void AddUser(User user)
         {
             _authContext.Users.Add(user);
             _authContext.SaveChanges();
         }
 
-        /// <summary>
-        /// Filters and finds the first(only) user that matches the
-        /// provided username.
-        /// </summary>
-        /// <param name="username">The username used to find the user.</param>
-        /// <returns>The users which username matches the provided username or null.</returns>
         public User GetUserByUsername(string username)
         {
             return _authContext.Users
@@ -41,6 +31,7 @@ namespace PhantasiaEngine.Auth.Repositories
             var user = _authContext.Users.FirstOrDefault(u => u.Username.Equals(username));
 
             if (user == null) return null;
+            if (!Cryptonite.Verify(password, user.PasswordHash)) return null;
             if (Tokenizer.VerifyTimestampedToken(user.Token)) return user.Token;
             
             user.Token = Tokenizer.CreateTimestampedToken();

@@ -1,9 +1,5 @@
 ﻿namespace PhantasiaEngine.Auth.Models
 {
-    /// <summary>
-    /// User is a data class that contains all the properties a user needs
-    /// including a hashed version of his password.
-    /// </summary>
     // ReSharper disable once ClassNeverInstantiated.Global
     public class User
     {

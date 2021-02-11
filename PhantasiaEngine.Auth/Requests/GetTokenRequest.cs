@@ -1,9 +1,5 @@
 ﻿namespace PhantasiaEngine.Auth.Requests
 {
-    /// <summary>
-    /// <c>GetTokenRequest</c> class contains the properties required for
-    /// the get token request.
-    /// </summary>
     // ReSharper disable UnusedAutoPropertyAccessor.Global
     public class GetTokenRequest
     {

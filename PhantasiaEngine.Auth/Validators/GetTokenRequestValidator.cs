@@ -4,10 +4,6 @@ using PhantasiaEngine.Auth.Services;
 
 namespace PhantasiaEngine.Auth.Validators
 {
-    /// <summary>
-    /// <c>GetTokenRequestValidator</c> contains all the validation rules for
-    /// <c>GetTokenRequest</c><see cref="GetTokenRequest"/>
-    /// </summary>
     // ReSharper disable once UnusedType.Global
     public class GetTokenRequestValidator : AbstractValidator<GetTokenRequest>
     {
